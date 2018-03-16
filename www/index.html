@@ -19,7 +19,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html>
+<html ng-app="Franconjugaison">
 
 <head>
     <meta charset="utf-8" />
@@ -42,7 +42,8 @@
     <title>Francojugaison</title>
 </head>
 
-<body>
+<body ng-controller="mainController as vm">
+
     <div class="app">
         <h1>PhoneGap</h1>
         <div id="deviceready" class="blink">
@@ -51,8 +52,8 @@
         </div>
     </div>
 	
-	<div id="verbo">
-		<h1>Abaisser</h1>
+	<div id="verbo" >	
+		<h1>Abaisser - {{vm.verbo.auxiliar}}</h1>
 		<div class="forma">
 			<h2>Indicatif 2<h2>
 			<div class="tempo">
@@ -71,8 +72,18 @@
 		</div>
 	</div>
 	
-    <script type="text/javascript" src="cordova.js"></script>
+		<!-- Scrips da aplicação-->
+	<script type="text/javascript" src="js/application.js"></script>
+	<script type="text/javascript" src="js/test.js"></script>
+	
+	<!--  ANGULAR -->
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-setup.js"></script>
+	
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
     <script type="text/javascript" src="js/index.js"></script>
+	
+	
     <script type="text/javascript">
         app.initialize();
     </script>

@@ -1,9 +1,3 @@
-var Verbo = function () {
-	this.grupo;
-	this.auxiliar;
-};
-
-
 var Forma = function () {
 	this.id;
 	this.nome;
@@ -11,45 +5,30 @@ var Forma = function () {
 
 var Tempo = function () {
 	this.id = null;
-	this.nome' = null;
+	this.nome = null;
 };
 
-var Tempo = function () {
+var Pessoa = function () {
 	this.id = null;
-	this.nome' = null;
+	this.nome = null;
 };
 
-var Sessao = function (id) {
-	this.TEMPO_PADRAO_INICIO = (60 * 60 * 1000); //1 hora
+var Conjugacao = function () {
 	this.id;
-	this.inicio = new Date();
-	this.sessoes= {};
-	this.qrCard = null;
-	this.fim = new Date(this.inicio.getTime() + this.TEMPO_PADRAO_INICIO);
-
-	this.getTempoRestante = function() {
-		alert("Não implementado");
-	};
-
-	this.aumentarTempo = function(quantidadeTempo) {
-		alert("Não implementado");
-	};
-
-	this.listar = function() {
-		alert("Não implementado");
-	};
-
-	this.adicionar = function(sessao) {
-		alert("Não implementado");
-	};
-
+	this.pessoa = null;
+	this.forma = null;
+	this.tempo= {};
+	this.raiz = null;
+	this.terminacao = null;
 };
 
-var Vaga = function () {
-	this.id;
-	this.rua;
-	this.sessao;
+var Verbo = function () {
+	this.grupo =null;
+	this.auxiliar = null;
+	this.conjugacoes= [];
 };
+
+
 
 Array.prototype.pushUnique = function (item){
     if(this.indexOf(item) == -1) {
@@ -58,3 +37,4 @@ Array.prototype.pushUnique = function (item){
     }
     return false;
 }
+
